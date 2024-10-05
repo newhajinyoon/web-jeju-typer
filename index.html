@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주어 입력기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #0073e6;
+        }
+
+        .container p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 1em;
+        }
+
+        .container ol {
+            text-align: left;
+            padding-left: 1.2em;
+        }
+
+        .container ol li {
+            margin-bottom: 0.5em;
+        }
+
+        pre {
+            background: #f4f4f9;
+            padding: 1em;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        code {
+            background: #e8e8ef;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+        }
+
+        .input-container {
+            margin-top: 2em;
+        }
+
+        .input-container input {
+            width: calc(100% - 2em);
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            outline: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            margin-bottom: 1em;
+        }
+
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://github.com/user-attachments/assets/17a4d45a-d5ab-4e2c-b4a0-3624dd5ac560" alt="Logo">
+        </div>
+        <h1>제주어 입력기 사용법</h1>
+        <p>이 페이지에 있는 텍스트 상자에 제주어를 입력해보세요! 간편하게 제주어 입력기를 사용하려면 아래 스크립트를 포함하세요.</p>
+        <pre>
+            <code>
+                &lt;script src="jejutyper.js"&gt;&lt;/script&gt;
+            </code>
+        </pre>
+
+        <h2>사용 방법</h2>
+        <ol>
+            <li>자음 + "ㅏㅏ" (ㅏ 두 번)을 입력할 시 아래아(ㆍ)가 입력됩니다.</li>
+            <li>자음 + "ㅑㅑ" (ㅑ 두 번)을 입력할 시 쌍아래아(ᆢ)가 입력됩니다.</li>
+            <li>종성 입력 차례일 때 "ㅁㅅ"을 입력하면 "ꥱ"를 종성으로 사용할 수 있습니다. (초성으로는 사용하지 못합니다.)</li>
+        </ol>
+        <p>제주 특별 문자가 감지되었을 때 현재 입력 중인 칸에 제주어 입력 미리보기가 달리고, 띄어쓰기나 줄바꿈을 해야 자동으로 입력됩니다.</p>
+        <p>별다른 제약 없이 출처만 남기시면 사용이 가능합니다! (https://github.com/newhajinyoon/newhajinyoon).</p>
+
+        <h2>체험해보세요!</h2>
+        <div class="input-container">
+            <input type="text" placeholder="여기에 입력하세요">
+        </div>
+    </div>
+    
+    <script src="jejutyper.js"></script>
+</body>
+</html>
